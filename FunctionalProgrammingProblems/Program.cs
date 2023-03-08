@@ -1,4 +1,5 @@
-﻿using FunctionalProgrammingProblems;
+﻿using System;
+using FunctionalProgrammingProblems;
 
 internal class Program
 {
@@ -8,7 +9,7 @@ internal class Program
         bool flag = true;
         while (flag)
         {
-            Console.WriteLine("Choose an option to execute\n1.Flip coin\n2.Leap year\n3.Exit");
+            Console.WriteLine("Choose an option to execute\n1.Flip coin\n2.Leap Year\n3.Power Of Two\n4.Exit");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -20,15 +21,18 @@ internal class Program
                     break;
                 case 2:
                     LeapYear leapYear = new LeapYear();
-                    Console.WriteLine("Enter a year:");
+                    Console.WriteLine("Enter year (yyyy): ");
                     int year = Convert.ToInt32(Console.ReadLine());
                     leapYear.CheckLeapYear(year);
                     break;
                 case 3:
-                    flag = false;
+                    PowerOfTwo powerOfTwo = new PowerOfTwo();
+                    Console.WriteLine("Enter value of N: ");
+                    int n = Convert.ToInt32(Console.ReadLine());
+                    powerOfTwo.PrintPowerOfTwo(n);
                     break;
-                default:
-                    Console.WriteLine("Invalid option. Please choose again.");
+                case 4:
+                    flag = false;
                     break;
             }
         }
