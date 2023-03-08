@@ -9,7 +9,7 @@ internal class Program
         bool flag = true;
         while (flag)
         {
-            Console.WriteLine("Choose an option to execute\n1.Flip coin\n2.Leap Year\n3.Power Of Two\n4.Harmonic Number\n5.Factors\n6.Compute Quotient and Remainder\n7.Swap Two Numbers\n8.Exit");
+            Console.WriteLine("Choose an option to execute\n1.Flip coin\n2.Leap Year\n3.Power Of Two\n4.Harmonic Number\n5.Factors\n6.Compute Quotient and Remainder\n7.Swap Two Numbers\n8.Check Even or Odd\n9.Exit");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -60,6 +60,12 @@ internal class Program
                     Console.WriteLine("After swapping: x = " + x + ", y = " + y);
                     break;
                 case 8:
+                    Console.WriteLine("Enter a number: ");
+                    int num1 = Convert.ToInt32(Console.ReadLine());
+                    EvenOrOdd evenOrOdd = new EvenOrOdd();
+                    evenOrOdd.CheckEvenOrOdd(num1);
+                    break;
+                case 9:
                     flag = false;
                     break;
             }
