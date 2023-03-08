@@ -1,5 +1,4 @@
 ﻿using System;
-using DryIoc;
 using FunctionalProgrammingProblems;
 
 internal class Program
@@ -10,7 +9,7 @@ internal class Program
         bool flag = true;
         while (flag)
         {
-            Console.WriteLine("Choose an option to execute\n1.Flip coin\n2.Leap Year\n3.Power Of Two\n4.Harmonic Number\n5.Factors\n6.Exit");
+            Console.WriteLine("Choose an option to execute\n1.Flip coin\n2.Leap Year\n3.Power Of Two\n4.Harmonic Number\n5.Factors\n6.Compute Quotient and Remainder\n7.Exit");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -45,6 +44,14 @@ internal class Program
                     factors.PrimeFactors(number);
                     break;
                 case 6:
+                    ComputeQuotient computeQuotient = new ComputeQuotient();
+                    Console.WriteLine("Enter dividend: ");
+                    int dividend = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Enter divisor: ");
+                    int divisor = Convert.ToInt32(Console.ReadLine());
+                    computeQuotient.ComputeQuotientAndRemainder(dividend, divisor);
+                    break;
+                case 7:
                     flag = false;
                     break;
             }
