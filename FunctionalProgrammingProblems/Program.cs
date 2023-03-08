@@ -9,7 +9,7 @@ internal class Program
         bool flag = true;
         while (flag)
         {
-            Console.WriteLine("Choose an option to execute\n1.Flip coin\n2.Leap Year\n3.Power Of Two\n4.Harmonic Number\n5.Factors\n6.Compute Quotient and Remainder\n7.Exit");
+            Console.WriteLine("Choose an option to execute\n1.Flip coin\n2.Leap Year\n3.Power Of Two\n4.Harmonic Number\n5.Factors\n6.Compute Quotient and Remainder\n7.Swap Two Numbers\n8.Exit");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -52,6 +52,14 @@ internal class Program
                     computeQuotient.ComputeQuotientAndRemainder(dividend, divisor);
                     break;
                 case 7:
+                    Console.WriteLine("Enter two numbers to be swapped: ");
+                    int x = Convert.ToInt32(Console.ReadLine());
+                    int y = Convert.ToInt32(Console.ReadLine());
+                    SwapTwoNumbers swap = new SwapTwoNumbers();
+                    swap.SwapNumbers(ref x, ref y);
+                    Console.WriteLine("After swapping: x = " + x + ", y = " + y);
+                    break;
+                case 8:
                     flag = false;
                     break;
             }
