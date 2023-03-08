@@ -9,7 +9,7 @@ internal class Program
         bool flag = true;
         while (flag)
         {
-            Console.WriteLine("Choose an option to execute\n1.Flip coin\n2.Leap Year\n3.Power Of Two\n4.Exit");
+            Console.WriteLine("Choose an option to execute\n1.Flip coin\n2.Leap Year\n3.Power Of Two\n4.Harmonic Number\n5.Exit");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -32,6 +32,12 @@ internal class Program
                     powerOfTwo.PrintPowerOfTwo(n);
                     break;
                 case 4:
+                    HarmonicNumber harmonicNumber = new HarmonicNumber();
+                    Console.WriteLine("Enter value of N: ");
+                    int hn = Convert.ToInt32(Console.ReadLine());
+                    harmonicNumber.PrintHarmonicNumber(hn);
+                    break;
+                case 5:
                     flag = false;
                     break;
             }
