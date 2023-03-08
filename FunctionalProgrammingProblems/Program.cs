@@ -5,11 +5,11 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Welcome to FunctionalProgrammingProblems!");
+        Console.WriteLine("Welcome to Functional Programming Problems!");
         bool flag = true;
         while (flag)
         {
-            Console.WriteLine("Choose an option to execute\n1.Flip coin\n2.Leap Year\n3.Power Of Two\n4.Harmonic Number\n5.Factors\n6.Compute Quotient and Remainder\n7.Swap Two Numbers\n8.Check Even or Odd\n9.Exit");
+            Console.WriteLine("Choose an option to execute\n1.Flip coin\n2.Leap Year\n3.Power Of Two\n4.Harmonic Number\n5.Factors\n6.Compute Quotient and Remainder\n7.Swap Two Numbers\n8.Check Even or Odd\n9.Alphabet is Vowel or Consonant\n10.Exit");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -66,6 +66,12 @@ internal class Program
                     evenOrOdd.CheckEvenOrOdd(num1);
                     break;
                 case 9:
+                    Console.WriteLine("Enter an alphabet: ");
+                    char alphabet = Console.ReadLine().ToLower()[0];
+                    Alphabet alpha = new Alphabet();
+                    alpha.CheckVowelOrConsonant(alphabet);
+                    break;
+                case 10:
                     flag = false;
                     break;
             }
